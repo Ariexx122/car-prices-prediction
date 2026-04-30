@@ -1,3 +1,10 @@
+# Windows thumbnails
+Thumbs.db
+desktop.ini
+
+# Folder config file
+.directory
+
 # Data
 data/
 
