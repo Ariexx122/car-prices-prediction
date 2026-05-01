@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoValuate — Car Price Estimator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=DM+Mono:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <div class="logo">Auto<span>Valuate</span></div>
+      </div>
+      <div class="header-tag">ML Price Estimator</div>
+    </header>
+
+    <div class="hero">
+      <h1>What is your car<br /><em>worth?</em></h1>
+      <p class="hero-sub">
+        Enter your vehicle's details below. Our model, trained on thousands of
+        German used car listings, will estimate its market value.
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <main>
+      <section class="form-panel">
+        <div class="section-title">
+          Vehicle Details
+          <span class="count">11 fields</span>
+        </div>
+
+        <form id="estimator-form">
+          <!-- ───── Basic Info ───── -->
+          <div class="form-group">
+            <div class="group-title">Basic Info</div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label>Brand</label>
+                <select name="brand" required>
+                  <option value="">Select brand</option>
+                  <option>volkswagen</option>
+                  <option>bmw</option>
+                  <option>opel</option>
+                  <option>mercedes_benz</option>
+                  <option>audi</option>
+                  <option>ford</option>
+                  <option>renault</option>
+                  <option>peugeot</option>
+                  <option>fiat</option>
+                  <option>seat</option>
+                  <option>skoda</option>
+                  <option>mazda</option>
+                  <option>nissan</option>
+                  <option>toyota</option>
+                  <option>honda</option>
+                  <option>hyundai</option>
+                  <option>kia</option>
+                  <option>volvo</option>
+                  <option>other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Model</label>
+                <select name="model" required>
+                  <option value="">Select model</option>
+                  <option>golf</option>
+                  <option>3er</option>
+                  <option>astra</option>
+                  <option>a4</option>
+                  <option>passat</option>
+                  <option>c_klasse</option>
+                  <option>polo</option>
+                  <option>corsa</option>
+                  <option>focus</option>
+                  <option>a3</option>
+                  <option>5er</option>
+                  <option>e_klasse</option>
+                  <option>fiesta</option>
+                  <option>megane</option>
+                  <option>207</option>
+                  <option>other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Vehicle Type</label>
+                <select name="vehicle_type" required>
+                  <option value="">Select type</option>
+                  <option>limousine</option>
+                  <option>kombi</option>
+                  <option>suv</option>
+                  <option>coupe</option>
+                  <option>cabrio</option>
+                  <option>bus</option>
+                  <option>kleinwagen</option>
+                  <option>unknown</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Fuel Type</label>
+                <select name="fuel_type" required>
+                  <option value="">Select fuel</option>
+                  <option>gasoline</option>
+                  <option>diesel</option>
+                  <option>lpg</option>
+                  <option>cng</option>
+                  <option>hybrid</option>
+                  <option>elektro</option>
+                  <option>unknown</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- ───── Specifications ───── -->
+          <div class="form-group">
+            <div class="group-title">Specifications</div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label>Gearbox</label>
+                <select name="gearbox" required>
+                  <option value="">Select gearbox</option>
+                  <option>manuell</option>
+                  <option>automatik</option>
+                  <option>unknown</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Previously Damaged</label>
+                <select name="not_repaired" required>
+                  <option value="">Select option</option>
+                  <option value="nein">No damage</option>
+                  <option value="ja">Has damage</option>
+                  <option value="unknown">Unknown</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Power (HP)</label>
+                <input type="number" name="power" min="10" max="600" required />
+                <span class="field-hint">Between 10 and 600 HP</span>
+              </div>
+
+              <div class="field">
+                <label>Mileage (km)</label>
+                <select name="mileage" required>
+                  <option value="">Select mileage</option>
+                  <option value="5000">5,000 km</option>
+                  <option value="10000">10,000 km</option>
+                  <option value="20000">20,000 km</option>
+                  <option value="30000">30,000 km</option>
+                  <option value="40000">40,000 km</option>
+                  <option value="50000">50,000 km</option>
+                  <option value="60000">60,000 km</option>
+                  <option value="70000">70,000 km</option>
+                  <option value="80000">80,000 km</option>
+                  <option value="90000">90,000 km</option>
+                  <option value="100000">100,000 km</option>
+                  <option value="125000">125,000 km</option>
+                  <option value="150000">150,000+ km</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- ───── Registration ───── -->
+          <div class="form-group">
+            <div class="group-title">Registration</div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label>Vehicle Age (years)</label>
+                <input
+                  type="number"
+                  name="age_at_listing"
+                  min="0"
+                  max="36"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label>Registration Month</label>
+                <select name="registration_month" required>
+                  <option value="">Select month</option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                  <option value="13">Unknown</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label>Listing Month</label>
+                <select name="month_created" required>
+                  <option value="">Select month</option>
+                  <option value="1">January</option>
+                  <option value="2">February</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" id="submit-btn">Estimate Price</button>
+            <p class="form-note">
+              Prediction generated<br />by ML model via Azure API
+            </p>
+          </div>
+        </form>
+      </section>
+
+      <aside class="result-panel">
+        <div class="result-label">Estimated Value</div>
+
+        <div class="result-idle" id="idle-state">
+          <div class="idle-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#6b6458"
+              stroke-width="1"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4l3 3" />
+            </svg>
+          </div>
+          <p class="idle-text">
+            Fill in the vehicle details<br />to get an estimated market price.
+          </p>
+        </div>
+
+        <div class="result-loading" id="loading-state">
+          <div class="spinner"></div>
+          <span class="loading-text">Analysing vehicle...</span>
+        </div>
+
+        <div class="result-display" id="result-state">
+          <div class="price-label">Market Estimate</div>
+          <div class="price-value" id="price-display">€ —</div>
+          <div class="price-sub" id="price-range">Estimated value</div>
+          <div class="result-details" id="result-details"></div>
+        </div>
+
+        <div class="result-error" id="error-state">
+          <div class="error-icon">!</div>
+          <p class="error-text" id="error-message">
+            Could not reach the API.<br />Please check your connection.
+          </p>
+          <button class="retry-btn" onclick="resetForm()">Try Again</button>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <span class="footer-text"
+        >AutoValuate — German Used Car Market · ML Model v1.0</span
+      >
+      <div class="api-status">
+        <div class="status-dot"></div>
+        API Connected
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
