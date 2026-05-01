@@ -35,10 +35,10 @@ model.load_model('cat_model.cbm')
 
 
 @app.post('/predict/')
-def predict(review_input: ReviewInput):
-    df = review_input.model_dump()
-    df = pd.DataFrame([df])
+def predict(reviewInput: ReviewInput):
+    input = reviewInput.model_dump()
+    data = pd.DataFrame([input])
 
-    prediction = model.predict(df)
+    prediction = model.predict(data)
 
     return {'prediction': f"{prediction[0]:.2f}"}

@@ -5,6 +5,9 @@ desktop.ini
 # Folder config file
 .directory
 
+# VS code workspace settings
+.vscode/
+
 # Data
 data/
 
