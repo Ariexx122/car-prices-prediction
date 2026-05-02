@@ -36,7 +36,6 @@
         </div>
 
         <form id="estimator-form">
-          <!-- ───── Basic Info ───── -->
           <div class="form-group">
             <div class="group-title">Basic Info</div>
 
@@ -45,25 +44,62 @@
                 <label>Brand</label>
                 <select name="brand" required>
                   <option value="">Select brand</option>
-                  <option>volkswagen</option>
-                  <option>bmw</option>
-                  <option>opel</option>
-                  <option>mercedes_benz</option>
-                  <option>audi</option>
-                  <option>ford</option>
-                  <option>renault</option>
-                  <option>peugeot</option>
-                  <option>fiat</option>
-                  <option>seat</option>
-                  <option>skoda</option>
-                  <option>mazda</option>
-                  <option>nissan</option>
-                  <option>toyota</option>
-                  <option>honda</option>
-                  <option>hyundai</option>
-                  <option>kia</option>
-                  <option>volvo</option>
-                  <option>other</option>
+
+                  <optgroup label="Popular">
+                    <option>volkswagen</option>
+                    <option>bmw</option>
+                    <option>opel</option>
+                    <option>mercedes_benz</option>
+                    <option>audi</option>
+                    <option>ford</option>
+                    <option>renault</option>
+                    <option>peugeot</option>
+                    <option>fiat</option>
+                    <option>seat</option>
+                    <option>skoda</option>
+                  </optgroup>
+
+                  <optgroup label="Mid-range">
+                    <option>smart</option>
+                    <option>mazda</option>
+                    <option>citroen</option>
+                    <option>toyota</option>
+                    <option>nissan</option>
+                    <option>hyundai</option>
+                    <option>mini</option>
+                    <option>volvo</option>
+                    <option>mitsubishi</option>
+                    <option>honda</option>
+                    <option>kia</option>
+                    <option>suzuki</option>
+                    <option>alfa_romeo</option>
+                    <option>chevrolet</option>
+                    <option>chrysler</option>
+                    <option>dacia</option>
+                  </optgroup>
+
+                  <optgroup label="Premium & Niche">
+                    <option>porsche</option>
+                    <option>subaru</option>
+                    <option>jeep</option>
+                    <option>daihatsu</option>
+                    <option>land_rover</option>
+                    <option>saab</option>
+                    <option>jaguar</option>
+                  </optgroup>
+
+                  <optgroup label="Rare / Legacy">
+                    <option>daewoo</option>
+                    <option>rover</option>
+                    <option>lancia</option>
+                    <option>trabant</option>
+                    <option>lada</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option>sonstige_autos</option>
+                    <option>other</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -71,22 +107,55 @@
                 <label>Model</label>
                 <select name="model" required>
                   <option value="">Select model</option>
-                  <option>golf</option>
-                  <option>3er</option>
-                  <option>astra</option>
-                  <option>a4</option>
-                  <option>passat</option>
-                  <option>c_klasse</option>
-                  <option>polo</option>
-                  <option>corsa</option>
-                  <option>focus</option>
-                  <option>a3</option>
-                  <option>5er</option>
-                  <option>e_klasse</option>
-                  <option>fiesta</option>
-                  <option>megane</option>
-                  <option>207</option>
-                  <option>other</option>
+
+                  <optgroup label="Popular Models">
+                    <option>golf</option>
+                    <option>3er</option>
+                    <option>polo</option>
+                    <option>passat</option>
+                    <option>a4</option>
+                    <option>corsa</option>
+                    <option>astra</option>
+                    <option>c_klasse</option>
+                    <option>5er</option>
+                    <option>e_klasse</option>
+                    <option>a3</option>
+                    <option>a6</option>
+                    <option>focus</option>
+                    <option>fiesta</option>
+                    <option>2_reihe</option>
+                    <option>transporter</option>
+                    <option>fortwo</option>
+                    <option>a_klasse</option>
+                    <option>twingo</option>
+                    <option>1er</option>
+                  </optgroup>
+
+                  <optgroup label="Common Models">
+                    <option>touran</option>
+                    <option>vectra</option>
+                    <option>zafira</option>
+                    <option>clio</option>
+                    <option>mondeo</option>
+                    <option>punto</option>
+                    <option>megane</option>
+                    <option>ibiza</option>
+                    <option>lupo</option>
+                    <option>octavia</option>
+                    <option>fabia</option>
+                    <option>cooper</option>
+                    <option>ka</option>
+                    <option>clk</option>
+                    <option>x_reihe</option>
+                    <option>caddy</option>
+                    <option>sharan</option>
+                    <option>micra</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option>unknown</option>
+                    <option>other</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -94,14 +163,24 @@
                 <label>Vehicle Type</label>
                 <select name="vehicle_type" required>
                   <option value="">Select type</option>
-                  <option>limousine</option>
-                  <option>kombi</option>
-                  <option>suv</option>
-                  <option>coupe</option>
-                  <option>cabrio</option>
-                  <option>bus</option>
-                  <option>kleinwagen</option>
-                  <option>unknown</option>
+
+                  <optgroup label="Common Types">
+                    <option value="sedan">Sedan</option>
+                    <option value="small">Small / City Car</option>
+                    <option value="wagon">Wagon / Estate</option>
+                    <option value="bus">Van / Bus</option>
+                  </optgroup>
+
+                  <optgroup label="Specialty">
+                    <option value="convertible">Convertible</option>
+                    <option value="coupe">Coupe</option>
+                    <option value="suv">SUV</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option value="unknown">Unknown</option>
+                    <option value="other">Other</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -109,13 +188,22 @@
                 <label>Fuel Type</label>
                 <select name="fuel_type" required>
                   <option value="">Select fuel</option>
-                  <option>gasoline</option>
-                  <option>diesel</option>
-                  <option>lpg</option>
-                  <option>cng</option>
-                  <option>hybrid</option>
-                  <option>elektro</option>
-                  <option>unknown</option>
+
+                  <optgroup label="Common">
+                    <option value="gasoline">Gasoline</option>
+                  </optgroup>
+
+                  <optgroup label="Alternative Fuels">
+                    <option value="lpg">LPG</option>
+                    <option value="cng">CNG</option>
+                    <option value="hybrid">Hybrid</option>
+                    <option value="electric">Electric</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option value="unknown">Unknown</option>
+                    <option value="other">Other</option>
+                  </optgroup>
                 </select>
               </div>
             </div>
@@ -130,19 +218,31 @@
                 <label>Gearbox</label>
                 <select name="gearbox" required>
                   <option value="">Select gearbox</option>
-                  <option>manuell</option>
-                  <option>automatik</option>
-                  <option>unknown</option>
+
+                  <optgroup label="Common">
+                    <option value="manual">Manual</option>
+                    <option value="auto">Automatic</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option value="unknown">Unknown</option>
+                  </optgroup>
                 </select>
               </div>
 
               <div class="field">
                 <label>Previously Damaged</label>
                 <select name="not_repaired" required>
-                  <option value="">Select option</option>
-                  <option value="nein">No damage</option>
-                  <option value="ja">Has damage</option>
-                  <option value="unknown">Unknown</option>
+                  <option value="">Select condition</option>
+
+                  <optgroup label="Condition">
+                    <option value="no">No damage</option>
+                    <option value="yes">Previously damaged</option>
+                  </optgroup>
+
+                  <optgroup label="Other">
+                    <option value="unknown">Unknown</option>
+                  </optgroup>
                 </select>
               </div>
 
@@ -174,7 +274,6 @@
             </div>
           </div>
 
-          <!-- ───── Registration ───── -->
           <div class="form-group">
             <div class="group-title">Registration</div>
 

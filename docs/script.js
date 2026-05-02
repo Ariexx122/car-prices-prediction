@@ -1,4 +1,5 @@
-const API_URL = "https://your-azure-endpoint.azurewebsites.net/predict";
+const API_URL =
+  "https://car-price-prediction-api-beamazh0asfkajb3.canadacentral-01.azurewebsites.net/predict/";
 
 const idle = document.getElementById("idle-state");
 const loading = document.getElementById("loading-state");
