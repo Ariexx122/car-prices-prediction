@@ -6,8 +6,6 @@ A full-stack machine learning project that predicts used car prices based on use
 
 ---
 
-## 📌 Why This Project Matters
-
 Pricing a used car is not trivial. The value depends on multiple interacting factors:
 
 - Vehicle age (depreciation)
